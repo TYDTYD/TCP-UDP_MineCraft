@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject localPlayerPrefab;
     public GameObject playerPrefab;
     public GameObject[] gameObjects;
+    public GameObject Cube;
+    public int seq = 0;
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
     // int로 이넘 타입을 받아서 각각의 타입을 받아넣기
     public void SpawnCube(Vector3 _position, int type)
     {
+        //gameObjects[seq++].transform.Translate(_position);
         Instantiate(gameObjects[type], _position, Quaternion.identity);
     }
 }

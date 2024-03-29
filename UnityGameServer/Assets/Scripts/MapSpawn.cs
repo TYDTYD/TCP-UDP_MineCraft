@@ -20,18 +20,13 @@ public class MapSpawn : MonoBehaviour
 {
     public GameObject world;
     public GameObject Cube;
-    public GameObject[] ObjectPooling = new GameObject[1000];
-    const int n = 100;
+    const int n = 25;
     public int[,] graph = new int[n, n];
     Queue<node> q = new Queue<node>();
-    int count = 7;
+    int count = 5;
 
     private void Start()
     {
-        for (int i = 0; i < 1000; i++)
-        {
-            ObjectPooling[i] = Cube;
-        }
         CreateWidth(0, n, n, 0, n/2, count);
         Bfs();
         
@@ -90,8 +85,8 @@ public class MapSpawn : MonoBehaviour
             for(int j=0; j<n; j++)
             {
                 Vector3 CubePos = new Vector3(i, graph[i, j], j);
-                ObjectPooling[seq++].transform.Translate(CubePos);
-                //Instantiate(Cube, CubePos, Quaternion.identity);
+                //ObjectPooling[seq++].transform.Translate(CubePos);
+                Instantiate(Cube, CubePos, Quaternion.identity);
                 if (graph[i, j] != 0)
                 {
                     int idx = graph[i, j] - 1;
@@ -99,8 +94,8 @@ public class MapSpawn : MonoBehaviour
                     {
                         Vector3 CubeDown = new Vector3(i, idx--, j);
                         ServerSend.BlockPosition(CubeDown, (int)mapType.Cube);
-                        ObjectPooling[seq++].transform.Translate(CubeDown);
-                        //Instantiate(Cube, CubeDown, Quaternion.identity);
+                        //ObjectPooling[seq++].transform.Translate(CubeDown);
+                        Instantiate(Cube, CubeDown, Quaternion.identity);
                     }
                 }
                 ServerSend.BlockPosition(CubePos, (int)mapType.Cube);
@@ -112,7 +107,7 @@ public class MapSpawn : MonoBehaviour
     {
         int[] dx = { 1, 0, -1, 0 };
         int[] dy = { 0, 1, 0, -1 };
-        int start = 0;
+        int start = n / 2;
         if (graph[start,start] == 1)
             q.Enqueue(new node(start, start, false));
         else

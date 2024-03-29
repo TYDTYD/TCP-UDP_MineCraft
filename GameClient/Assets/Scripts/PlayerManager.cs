@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public float health;
     public float maxHealth;
     public MeshRenderer model;
+    public GameObject[] gameObjects;
 
     public void Initialize(int _id, string _username)
     {
