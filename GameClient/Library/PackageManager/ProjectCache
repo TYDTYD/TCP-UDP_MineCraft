@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638227789037115651
-    m_Hash: 2891438559
+      ticks: 638473417802826172
+    m_Hash: 2691402910
   m_LockFileStatus:
     m_FilePath: "C:/Users/pc/OneDrive/\uBB38\uC11C/GitHub/TCP-UDP_MineCraft/GameClient/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638227789336150696
-    m_Hash: 2324796788
+      ticks: 638473417802886174
+    m_Hash: 196557444
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,55 @@ m_LocalPackages:
 m_ProjectPath: "C:/Users/pc/OneDrive/\uBB38\uC11C/GitHub/TCP-UDP_MineCraft/GameClient/Packages"
 m_EditorVersion: 2021.3.12f1 (8af3c3e441b1)
 m_ResolvedPackages:
+- packageId: com.cysharp.unitask@https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask
+  testable: 0
+  isDirectDependency: 1
+  version: 2.5.4
+  source: 5
+  resolvedPath: "C:\\Users\\pc\\OneDrive\\\uBB38\uC11C\\GitHub\\TCP-UDP_MineCraft\\GameClient\\Library\\PackageCache\\com.cysharp.unitask@d057074f17"
+  assetPath: Packages/com.cysharp.unitask
+  name: com.cysharp.unitask
+  displayName: UniTask
+  author:
+    name: Cysharp, Inc.
+    email: 
+    url: https://cysharp.co.jp/en/
+  category: Task
+  type: 
+  description: Provides an efficient async/await integration to Unity.
+  status: 4
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - async/await
+  - async
+  - Task
+  - UniTask
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.17.2
   testable: 0
   isDirectDependency: 1

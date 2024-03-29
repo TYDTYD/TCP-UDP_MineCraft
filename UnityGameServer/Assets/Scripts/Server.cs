@@ -26,8 +26,9 @@ public class Server
 
         tcpListener = new TcpListener(IPAddress.Any, Port);
         tcpListener.Start();
+        // 바인드
         tcpListener.BeginAcceptTcpClient(new AsyncCallback(TCPConnectCallback), null);
-
+        // 서버 연결
         udpListner = new UdpClient(Port);
         udpListner.BeginReceive(UDPReceiveCallback, null);
 

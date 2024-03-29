@@ -138,7 +138,7 @@ public class ServerSend
         {
             _packet.Write(_position);
             _packet.Write(type);
-            SendTCPDataToAll(_packet);
+            SendUDPDataToAll(_packet);
         }
     }
     #endregion
